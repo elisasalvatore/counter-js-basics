@@ -11,10 +11,10 @@ themeInput.addEventListener("change", (e) => {
 
 function darkMode() {
 	document.body.classList.add("dark-mode");
-	checkbox.checked = true;
+	themeInput.checked = true;
 }
 
 function lightMode() {
 	document.body.classList.remove("dark-mode");
-	checkbox.checked = false;
+	themeInput.checked = false;
 }
