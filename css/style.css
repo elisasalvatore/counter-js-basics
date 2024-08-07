@@ -31,8 +31,8 @@ body {
 	width: 100%;
 	height: 100%;
 	flex-direction: column;
-	padding: 20px;
 
+	/* Media query dal tablet in poi */
 	@media (min-width: 768px) {
 		width: 80vw;
 		height: 80vh;
@@ -40,32 +40,38 @@ body {
 }
 
 .numbers {
+	height: 50vh;
 	color: var(--secondary-color);
-	font-size: 5rem;
+	font-size: 6rem;
 
+	/* Media query dal tablet in poi */
 	@media (min-width: 768px) {
-		font-size: 8rem;
+		font-size: 12rem;
 	}
 
-	@media (min-width: 768px) {
-		font-size: 8rem;
-	}
-
+	/* Media query da desktop in poi */
 	@media (min-width: 992px) {
-		font-size: 10rem;
+		font-size: 15rem;
+		margin-bottom: 50px;
 	}
 }
 
 .operators {
 	width: 80px;
 	height: 80px;
-	margin: 10px;
+	margin: 0 10px;
 	border: none;
 	background-color: var(--secondary-color);
 	color: var(--primary-color);
 	font-size: 2rem;
 	box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
 	cursor: pointer;
+
+	/* Media query dal tablet in poi */
+	@media (min-width: 768px) {
+		width: 100px;
+		height: 100px;
+	}
 }
 
 .operators:hover {
