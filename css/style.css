@@ -1,3 +1,17 @@
+/* Custom style variables  */
+:root {
+	--primary-color: #809df6;
+	--secondary-color: #ffffff;
+}
+
+/* Utilities styles */
+.flex-center-element {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Layout styles */
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -6,16 +20,11 @@
 	font-size: 30px;
 	font-weight: 100;
 }
-.flex-center-element {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
 body {
 	width: 100vw;
 	height: 100vh;
-	background-color: #809df6;
+	background-color: var(--primary-color);
 }
 
 .container {
@@ -31,7 +40,7 @@ body {
 }
 
 .numbers {
-	color: #ffffff;
+	color: var(--secondary-color);
 	font-size: 5rem;
 
 	@media (min-width: 768px) {
@@ -50,16 +59,12 @@ body {
 .operators {
 	width: 80px;
 	height: 80px;
-	background-color: #ffffff;
-	color: #809df6;
-	font-size: 2rem;
-	cursor: pointer;
 	margin: 10px;
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	font-size: 2rem;
 	box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
-	/* 
-	@media (min-width: 768px) {
-		font-size: 2rem;
-	} */
+	cursor: pointer;
 }
 
 .operators:hover {
