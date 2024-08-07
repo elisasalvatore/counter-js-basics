@@ -1,17 +1,28 @@
-/* Custom style variables  */
+/*--- Custom style variables  */
 :root {
 	--primary-color: #809df6;
 	--secondary-color: #ffffff;
 }
 
-/* Utilities styles */
+/*--- Utilities styles */
 .flex-center-element {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-/* Layout styles */
+/*--- Theme styles */
+.dark-mode {
+	--primary-color: #335acf;
+}
+
+input[type="checkbox"] {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+/*--- Layout styles */
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -22,10 +33,44 @@
 }
 
 body {
+	flex-direction: column;
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	background-color: var(--primary-color);
 }
+
+/* Navbar Styles */
+.nav {
+	width: 100vw;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	padding: 0 20px;
+	background-color: var(--primary-color);
+}
+
+.nav-item {
+	letter-spacing: 0.2px;
+	font-size: 0.5rem;
+	color: var(--secondary-color);
+	cursor: pointer;
+}
+
+.nav-item:hover {
+	border-bottom: 1px solid var(--secondary-color);
+}
+
+.btn-zero {
+	border: none;
+	background-color: var(--primary-color);
+	margin-right: 20px;
+
+	@media (min-width: 768px) {
+		margin-right: 40px;
+	}
+}
+/* END Navbar styles */
 
 .container {
 	width: 100%;
