@@ -1,27 +1,46 @@
-// Creo referenze con elementi HTML
+//--- 1. Creo referenze con elementi HTML
 const outputData = document.querySelector("[data-output");
 const inputData = document.querySelector("[data-input]");
 
-// Creo visualizzatore del valore del counter
-const numbersP = document.createElement("p");
-numbersP.innerText = "0000";
-numbersP.classList.add("numbers");
-outputData.appendChild(numbersP);
+//--- 2. Creo visualizzatore del valore del counter
+outputData.innerHTML = "0";
+outputData.classList.add("numbers");
 
-//Creo elementi per incremento e decremento del counter
+//--- 3. Creo elementi per permettere l'incremento ed il decremento del counter
 const operators = ["+", "-"];
-// Eseguo un ciclo sull'array egli operatori
+// Eseguo un ciclo sull'array degli operatori
 for (let i = 0; i < operators.length; i++) {
-	//Per ogni operatore creo un nuovo elemento "div"
-	const operatorDiv = document.createElement("div");
-	//e salvo il valore di ogni elemento dell'array in una variabile
+	// Salvo il valore di ogni elemento dell'array in una variabile
 	const operatorSymbol = operators[i];
 	// console.log(operatorSymbol);
 
-	//Inserisco il valore delle variabili all'interno dei "div" creati in precendenza
-	operatorDiv.innerHTML += operatorSymbol;
+	//Per ogni operatore creo un nuovo elemento "button"
+	const inputButton = document.createElement("button");
+	//Inserisco il valore delle variabili all'interno dei "div" appena creati
+	inputButton.innerHTML += operatorSymbol;
 	// Aggiungo delle classi css ai "div" che contengono gli elementi dell'array
-	operatorDiv.classList.add("operators", "flex-center-element");
-	//Inserisco i "div" appena creati come nodi figli, quindi all'iterno, dell'elemento HTML contraddistinto dall'attributo [data-input]
-	inputData.appendChild(operatorDiv);
+	inputButton.classList.add("operators", "flex-center-element");
+	//Inserisco i "div" appena creati come figli dell'elemento HTML contraddistinto dall'attributo [data-input]
+	inputData.appendChild(inputButton);
 }
+
+//--- 4. Aggiungo eventi ai bottoni per l'incremento ed il decremento del counter
+const getOperatorsDivs = document.querySelectorAll(".operators");
+const plusOperator = getOperatorsDivs[0];
+const minusOperator = getOperatorsDivs[1];
+
+let contentOutputData = parseInt(outputData.textContent);
+
+// Incremento del counter ++
+plusOperator.addEventListener("click", (e) => {
+	e.preventDefault();
+	contentOutputData++;
+	outputData.innerHTML = contentOutputData;
+});
+
+// Decremento del counter --
+minusOperator.addEventListener("click", (e) => {
+	e.preventDefault();
+	contentOutputData--;
+	outputData.innerHTML = contentOutputData;
+});

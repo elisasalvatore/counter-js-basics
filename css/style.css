@@ -60,6 +60,7 @@ body {
 	width: 80px;
 	height: 80px;
 	margin: 10px;
+	border: none;
 	background-color: var(--secondary-color);
 	color: var(--primary-color);
 	font-size: 2rem;
@@ -68,6 +69,10 @@ body {
 }
 
 .operators:hover {
-	font-weight: 600;
+	font-weight: 300;
 	box-shadow: 0 5px 20px rgba(255, 255, 255, 0.6);
+}
+
+.operators:active {
+	transform: scale(0.8);
 }
