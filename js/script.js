@@ -10,7 +10,7 @@ function displayNumbers() {
 
 //--- 3. Creo elementi per permettere l'incremento ed il decremento del counter
 function displayOperators() {
-	const operators = ["+", "-"];
+	const operators = ["-", "+"];
 	// Eseguo un ciclo sull'array degli operatori
 	for (let i = 0; i < operators.length; i++) {
 		// Salvo il valore di ogni elemento dell'array in una variabile
@@ -38,8 +38,8 @@ function displayDOMElements() {
 function setCounter() {
 	// Referenze per evento di incremento e decremento
 	const getOperatorsGroup = document.querySelectorAll(".operators");
-	const plusOperator = getOperatorsGroup[0];
-	const minusOperator = getOperatorsGroup[1];
+	const minusOperator = getOperatorsGroup[0];
+	const plusOperator = getOperatorsGroup[1];
 
 	// Incremento del counter ++
 	plusOperator.addEventListener("click", () => {
