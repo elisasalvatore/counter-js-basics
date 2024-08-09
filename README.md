@@ -2,6 +2,8 @@
 
 Simple Counter JS è una semplice applicazione di contatore basata su JavaScript, HTML e CSS. Questo progetto è perfetto per chi vuole imparare le basi di JavaScript e vedere come interagisce con il DOM (Document Object Model).
 
+Per visualizzare il progetto [clicca qui](https://counter-project-s2i.netlify.app/).
+
 ## Descrizione
 
 Questa applicazione consente agli utenti di incrementare o decrementare un valore numerico visualizzato su una pagina web. È un esempio ideale per chi sta imparando JavaScript e vuole vedere come i cambiamenti di stato possono essere riflessi in tempo reale nel browser.
